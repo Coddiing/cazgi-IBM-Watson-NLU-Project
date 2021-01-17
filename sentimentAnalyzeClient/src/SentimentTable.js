@@ -36,6 +36,7 @@ class SentimentTable extends React.Component {
                         )
                     
                     } )
+                    
                     //Write code to use the .map method that you worked on in the Hands-on React lab to extract the emotions
     
                 }
