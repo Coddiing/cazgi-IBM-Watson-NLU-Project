@@ -18,8 +18,8 @@ class SentimentTable extends React.Component {
           <table className="table table-bordered">
             <thead>
                 <tr>
-                <th>Emotions</th>
-                <th>Numbers</th>
+                    <th>Emotions</th>
+                    <th>Numbers</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,13 +27,17 @@ class SentimentTable extends React.Component {
                     
                     this.props.emotions.map ( ( data, index, arr ) => {
                         
-                               return Object.keys( data.emotion ).map( (sentiment, index, arr) => 
-                                   <TableRows sentiment={sentiment} data={data.emotion} />
-                                    
-                                 )
+                        return Object.keys( data.emotion ).map( (sentiment, index, arr) => {
+                           
+                            
+                            return <TableRows  sentiment={sentiment} data={data.emotion} />
+                        }
+                             
+                        )
                     
                     } )
                     //Write code to use the .map method that you worked on in the Hands-on React lab to extract the emotions
+    
                 }
             </tbody>
 
