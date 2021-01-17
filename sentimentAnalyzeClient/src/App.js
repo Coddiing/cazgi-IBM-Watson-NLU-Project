@@ -38,11 +38,17 @@ class App extends React.Component {
     this.setState({sentiment:true});
     let ret = "";
     let url = ".";
+    let text = document.getElementById("textinput").value
 
+    if ( text=="" )
+    {
+      alert( "Empty!" )
+      return;
+    }
     if(this.state.mode === "url") {
-      url = url+"/url/sentiment?url="+document.getElementById("textinput").value;
+      url = url+"/url/sentiment?url="+text;
     } else {
-      url = url+"/text/sentiment?text="+document.getElementById("textinput").value;
+      url = url+"/text/sentiment?text="+text;
     }
     ret = axios.get(url);
     ret.then((response)=>{
