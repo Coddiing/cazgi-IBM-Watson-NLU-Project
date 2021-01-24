@@ -5,6 +5,7 @@ import TableRows from './TableRows.js';
 
 class SentimentTable extends React.Component {
     processData() {
+        
         var resp = this.props.emotions
         resp.map ( ( data, index, arr ) => {
             console.log( data )
@@ -18,7 +19,7 @@ class SentimentTable extends React.Component {
           <table className="table table-bordered">
             <thead>
                 <tr>
-                    <th>Emotions</th>
+                    <th>Sentiments</th>
                     <th>Numbers</th>
                 </tr>
             </thead>
@@ -36,7 +37,7 @@ class SentimentTable extends React.Component {
                         )
                     
                     } )
-                    
+
                     //Write code to use the .map method that you worked on in the Hands-on React lab to extract the emotions
     
                 }

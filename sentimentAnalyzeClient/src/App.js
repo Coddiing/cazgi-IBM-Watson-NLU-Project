@@ -74,7 +74,7 @@ class App extends React.Component {
       //   output = <div style={{color:"orange",fontSize:20}}>{response.data}</div>
       // }
       // this.setState({sentimentOutput:output});
-    });
+    }).catch( err => console.log( "Err: " + err ) );
   }
 
   sendForEmotionAnalysis = () => {
@@ -91,7 +91,8 @@ class App extends React.Component {
 
       ret.then((response)=>{
         console.log( response )
-        this.setState({sentimentOutput:<EmotionTable emotions={response.data}/>});
+        var resp = response.data.result.emotion.targets
+        this.setState({sentimentOutput:<EmotionTable emotions={resp}/>});
       });
 
   }

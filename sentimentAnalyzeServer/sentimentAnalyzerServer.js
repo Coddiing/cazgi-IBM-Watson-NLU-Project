@@ -57,7 +57,7 @@ function getNLUInstance() {
     //   };
 
     const analyzeParams = {
-        'html': '<html><head><title>Fruits</title></head><body><h1>Apples and Oranges</h1><p>'+ textToAnalyze +'</p></body></html>',
+        'html': '<html><head><title>Fruits</title></head><body><h1>Apples and Oranges</h1><p>'+ textToAnalize +'</p></body></html>',
         'features': {
           'emotion': {
             'targets': [

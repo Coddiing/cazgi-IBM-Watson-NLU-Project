@@ -1,5 +1,8 @@
 {
   "name": "sentimentanalyzeserver",
+  "engines": {
+    "node": "0.8.x"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "sentimentAnalyzerServer.js",
